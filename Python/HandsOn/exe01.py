@@ -1,10 +1,13 @@
+from pprint import pprint
+
+
 def sistema_bancario():
     saldo = 1000.0
     limite_saques = 3
     numero_saques = 0
 
     while True:
-        print('*************Sistema Bancario**************')
+        pprint('*************Sistema Bancario**************')
         nome = input('Digite seu nome: ')
         print(f'Bem vindo {nome} ao nosso sistema bancario')     
         print('Escolha uma das opções abaixo:')
