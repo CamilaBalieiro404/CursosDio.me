@@ -1,0 +1,197 @@
+/* ==========================================================================
+   RESET & VARIÁVEIS (DESIGN SYSTEM DARK ROMÂNTICO)
+   ========================================================================== */
+:root {
+    /* Cores Principais - Tema Morticia Addams */
+    --bg-primary: #0b020e;          /* Veludo roxo escuro profundo */
+    --bg-secondary: #14051a;        /* Tom levemente mais claro para contraste */
+    --bg-card: rgba(30, 10, 38, 0.4);/* Card sutil transparente */
+    
+    --text-primary: #f5e6e8;        /* Cetim bege claro para leitura confortável */
+    --text-secondary: #cbb4be;      /* Roxo acinzentado suave */
+    
+    --accent-rose: #d19fb5;         /* Dusty Rose (Sensual e Romântico) */
+    --accent-purple: #8e44ad;       /* Roxo Místico */
+    --border-color: #2e103f;        /* Borda sutil */
+    
+    /* Tipografia */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   HEADER (ESTILO ROMÂNTICO & SOMBRIO)
+   ========================================================================== */
+
+header {
+    text-align: center;
+    padding: 4rem 1.5rem 3rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--accent-rose);
+    letter-spacing: -0.5px;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+header img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent-rose);
+    padding: 4px;
+    background-color: var(--bg-primary);
+    box-shadow: 0 0 20px rgba(209, 159, 181, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+header img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(209, 159, 181, 0.35);
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (MAIN & SECTION)
+   ========================================================================== */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.prioridades {
+    max-width: 720px;
+    width: 100%;
+    padding: 3.5rem 1.5rem;
+}
+
+.prioridades h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* Ornamento vitoriano/delicado abaixo do h2 */
+.prioridades h2::after {
+    content: "❦";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: var(--accent-rose);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+strong {
+    color: var(--accent-rose);
+    font-weight: 600;
+}
+
+em {
+    color: var(--accent-purple);
+    font-style: italic;
+}
+
+/* Cards das Prioridades */
+.prioridade-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-rose);
+    border-radius: 6px;
+    padding: 1.5rem 1.8rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(4px);
+}
+
+.prioridade-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.prioridade-item p:last-child {
+    margin-bottom: 0;
+}
+
+.conclusao {
+    margin-top: 2.5rem;
+    font-size: 1.05rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+/* ==========================================================================
+   FOOTER (RODAPÉ)
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border-color);
+    background-color: #050107;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #6a5370;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 2.5rem 1rem 2rem 1rem;
+    }
+
+    .prioridades {
+        padding: 2rem 1.2rem;
+    }
+
+    .prioridade-item {
+        padding: 1.2rem;
+    }
+}

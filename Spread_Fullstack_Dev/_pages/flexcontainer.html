@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>displayflex</title>
+    <style>
+        .flex {
+            max-width: 800px;
+            padding: 20px;
+            border: 2px solid #a01313;
+            display: flex;
+
+        }
+        .flex-container {
+            margin:0;
+            padding:0;
+            display:flex;
+            list-style:none;
+        }
+        .flex-item{
+            background-color: #18cd54;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+        }
+        .item {
+            background-color: #ffffff;
+            margin: 10px;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        
+        .row-reverse li{
+            background-color: #670d0d;
+        }
+        .column{
+            float: left;
+            flex-direction: column;
+        }
+        .column li{
+            background-color: #a17d12;
+        }
+        .column-reverse{
+            flex-direction: column-reverse;
+        }
+     
+        .column-reverse li{
+            background-color: #0d670d;
+            flex-direction: row-reverse;
+        }
+        .flex-container2{
+           display: flex;
+           height: 100px;
+        }
+        .item2{
+            font-size: 30px;
+            height: 100px;
+            text-align: center;
+            width: 100px;
+            line-height: 100px;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .blue{
+            background-color: #0d67a1;
+        }
+        .green{
+            background-color: #0da13a;
+        }
+        .orange{
+            background-color: #a16b0d;
+        }
+        
+</style>
+</head>
+<body>
+    <h1>no-wap</h1>
+    <div class="flex-container2">
+        <div class="item2 orange">item1</div>
+        <div class="item2 green">item2</div>
+        <div class="item2 blue">item3</div>
+    </div>
+    <div class="flex1">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <div class ="flex">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <ul class="flex-container row">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+    </ul>
+    <ul class="flex-container row-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+    </ul>
+    <ul class="flex-container column">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+    </ul>
+    <ul class="flex-container column-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+    </ul>
+</body>
+</html>
